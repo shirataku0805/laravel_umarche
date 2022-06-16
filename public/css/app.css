@@ -823,6 +823,12 @@ select {
 .w-6 {
   width: 1.5rem;
 }
+.w-1 {
+  width: 0.25rem;
+}
+.w-1\/4 {
+  width: 25%;
+}
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -919,6 +925,9 @@ select {
 }
 .border {
   border-width: 1px;
+}
+.border-2 {
+  border-width: 2px;
 }
 .border-b-2 {
   border-bottom-width: 2px;
