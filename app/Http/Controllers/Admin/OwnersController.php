@@ -24,13 +24,13 @@ class OwnersController extends Controller
     public function index()
     {
         //
-        $date_now = Carbon::now();
-        $date_parce = Carbon::parse(now());
-        echo $date_now->year;
-        echo $date_parce;
+        // $date_now = Carbon::now();
+        // $date_parce = Carbon::parse(now());
+        // echo $date_now->year;
+        // echo $date_parce;
 
-        $e_all = Owner::all();
-        $q_get = DB::table('owners')->select('name','created_at')->get();
+        // $e_all = Owner::all();
+        // $q_get = DB::table('owners')->select('name','created_at')->get();
         // $q_first = DB::table('owners')->select('name')->first();
 
         // $c_test = collect([
@@ -40,8 +40,10 @@ class OwnersController extends Controller
         // var_dump($q_first);
 
         // dd($e_all,$q_get,$q_first,$c_test);
+        $owners = Owner::select('name','email','created_at')->get();
+
         return view('admin.owners.index',
-        compact('e_all','q_get'));
+        compact('owners'));
     }
 
     /**
@@ -52,6 +54,7 @@ class OwnersController extends Controller
     public function create()
     {
         //
+        return view('admin.owners.create');
     }
 
     /**
