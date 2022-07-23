@@ -2,8 +2,8 @@
 if($type === 'shops'){
   $path = 'storage/shops/';
 }
-if($type === 'prodacts'){
-  $path = 'storage/prodacts/';
+if($type === 'products'){
+  $path = 'storage/products/';
 }
 
 @endphp
